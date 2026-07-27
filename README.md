@@ -1,6 +1,7 @@
 Gesture-Controlled Unity Platformer
 #### Video Demo:  https://youtu.be/XzaHnjd7RW8
-#### Description: This project is a 2D platformer built in Unity that you control entirely with hand gestures instead of a keyboard. A webcam watches your hands, a YOLOv8 segmentation model figures out what gesture each hand is making, and that gesture gets mapped to an in-game action: moving, jumping, dashing, attacking, or quitting. The left hand handles movement and the right hand handles actions, so you're effectively using both hands like two halves of a controller, just without touching anything.
+#### Description: 
+This project is a 2D platformer built in Unity that you control entirely with hand gestures instead of a keyboard. A webcam watches your hands, a YOLOv8 segmentation model figures out what gesture each hand is making, and that gesture gets mapped to an in-game action: moving, jumping, dashing, attacking, or quitting. The left hand handles movement and the right hand handles actions, so you're effectively using both hands like two halves of a controller, just without touching anything.
 
 The idea started from wanting to combine two things I'd been learning separately: computer vision and game development. I'd trained small YOLO models before for basic object detection, but I hadn't tried running one live, inside a game engine, controlling gameplay in real time. That turned out to be the hard part, and most of this README is really about how I got from "model that can classify a gesture in a still image" to "model that can control a platformer without lagging or spamming inputs."
 
