@@ -22,9 +22,7 @@ public class YOLOInference : MonoBehaviour
         int selectedIndex = PlayerPrefs.GetInt(ModelSelector.PrefKey, 0);
         selectedIndex = Mathf.Clamp(selectedIndex, 0, yoloModelOptions.Length - 1);
 
-        // Half the input resolution — must scale with the chosen model's input size,
-        // since the bounding box x-coordinate it's compared against is in pixel units
-        // of that resolution, not normalized 0-1.
+        
         Screencentre = ModelSelector.GetSelectedInputSize() / 2f;
 
         runtimeModel = ModelLoader.Load(yoloModelOptions[selectedIndex]);
@@ -79,9 +77,8 @@ public class YOLOInference : MonoBehaviour
                 }
             }
 
-            //if (maxClass == -1) continue;
-            //Debug.Log($"Class={classNames[maxClass]}  x={cx:F3}  conf={maxConf:F2}");
-            // split by x coordinate — left half vs right half
+            
+            // split by x coordinate  left half vs right half
             if (cx > Screencentre)
             {
                 if (maxConf > bestLeftConf)
