@@ -16,9 +16,10 @@ public class WebcamManager : MonoBehaviour
     {
         inputSize = ModelSelector.GetSelectedInputSize();
 
-        // Don't resize the inspector-assigned 'yolobuffer' asset directly — that would
-        // permanently mutate the project asset. Make a runtime-only copy at the
-        // resolution the selected model needs instead.
+
+
+
+        
         runtimeBuffer = new RenderTexture(inputSize, inputSize, yolobuffer.depth, yolobuffer.format);
         runtimeBuffer.Create();
 
